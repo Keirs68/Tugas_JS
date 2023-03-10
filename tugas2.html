@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+</head>
+<body style = "background-color: #DDF7E3; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">  
+</body>
+<script>
+    // deklarasi variabel
+    let pegawai = "Putri Maulida";
+    let jabatan = "Manager";
+    let status = "Belum Menikah";
+    let gaji_pokok = "";
+
+    // struktur kendali untuk jabatan
+    if (jabatan == "Manager") {
+        gaji_pokok = 10000000
+    }else if (jabatan == "Asisten Manager") {
+        gaji_pokok = 8000000
+    }else if (jabatan == "Staff") {
+        gaji_pokok = 5000000
+    }
+
+    // deklarasi variabel
+    let tunjangan_jabatan = 0.1 * gaji_pokok;
+    let BPJS = 0.1 * gaji_pokok;
+
+    // struktur kendali untuk tunjangan keluarga
+    let tunjangan_keluarga = "";
+    if (status == "Menikah") {
+        tunjangan_keluarga = 0.1 * gaji_pokok;
+    }else if (status == "Belum Menikah") {
+        tunjangan_keluarga = 0;
+    }
+
+    // deklarasi variabel
+    let total_penghasilan = gaji_pokok + tunjangan_jabatan + BPJS + tunjangan_keluarga;
+
+    document.write("Data Pegawai" +
+    "<br> ======================" +
+    "<br> Nama Pegawai : " + pegawai + 
+    "<br> Status : " + status +
+    "<br> Jabatan : " + jabatan +
+    "<br> Gaji Pokok : Rp.  " + gaji_pokok +
+    "<br> Tunjangan Jabatan : Rp. " + tunjangan_jabatan +
+    "<br> BPJS : Rp. " + BPJS +
+    "<br> Tunjangan Keluarga : Rp. " + tunjangan_keluarga +
+    "<br> Total Penghasilan : Rp." + total_penghasilan
+    )
+</script>
+
+</html>
