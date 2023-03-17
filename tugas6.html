@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 6</title>
+    <script src="js/jquery-3.6.4.js"></script>
+
+    <!-- Penggunaan CSS Internal -->
+    <style type="text/css">
+        img {
+            width: 150pt;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        body {
+            background-color: rgb(137, 164, 188);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Menampilkan Gambar -->
+    <img id="img1" src="img/img 1.jpg"><br>
+    <img id="img2" src="img/img 2.jpg"><br>
+    <img id="img3" src="img/img 3.jpg">
+
+    <!-- Action untuk menghide gambar saat diklik -->
+    <script>
+        $(document).ready(function (){
+            $("#img1").click(function(){
+                $(this).hide(500);
+            });
+
+            $("#img2").click(function(){
+                $(this).hide(400);
+            });
+
+            $("#img3").click(function(){
+                $(this).hide(300);
+            });
+        });
+    </script>
+</body>
+
+</html>
